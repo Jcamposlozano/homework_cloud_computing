@@ -86,4 +86,4 @@ El script incluye datos de ejemplo para 10 contenedores con distintos niveles de
 
 ### Imagen del Modelo
 
-![Carga de la informacion a la base de datos](images/almacenamiento.png)
+![Carga de la informacion a la base de datos](imagenes/almacenamiento.png)
