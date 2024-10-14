@@ -95,10 +95,19 @@ Por defecto, el script monitorea los contenedores durante 1 minuto. Puedes ajust
   - Establece una conexión a la base de datos PostgreSQL.
 
 - **procesar_stream()**: 
-  - Procesa los datos en la cola `data_stream` y los inserta en la base de datos.
+  - Procesa los datos en la cola `data_stream` y los inserta en la base de datos. Este proceso sera el que se pondra en produccion dentro de la herramienta de `Kinesis`
+
+- **predecir_fallo(nueva_medida)**: 
+  - Se encarga de usar el modelo de prediccion con el fin de determinar si existe o no un fallo en alguna de las calderas. Este proceso sera el que se use en la `AWS Lambda`.
+
 
 - **iniciar_monitoreo_contenedores(contenedores_data, duracion_minutos)**: 
-  - Inicia el monitoreo de los contenedores y el procesamiento de datos en hilos separados.
+  - Inicia el monitoreo de los contenedores y el procesamiento de datos en hilos separados. Este sera la informacion de los sencores `Iot`.
+
+### Data Simulacion
+
+Dentro de este se encuentra la simulacion de mas de 3600 horas de funcionamiento continuo de cada uno de las calderas. Con esta informacion se realizo el entrenamiento para el modelo y se genero el `.joblib` para la carga del modelo.
+
 
 ## Ejemplo de Datos
 
@@ -127,7 +136,7 @@ contenedores_data = {
 
 ![Carga de la informacion a la base de datos](imagenes/almacenamiento.png)
 
-En esta imagen se recrea la carga de la informacion proveniente del `data_stream`. en la cual cada registro es un evento que se genera para la medicion del estado de la caldera.
+En esta imagen se recrea la carga de la informacion proveniente del `data_stream`. en la cual cada registro es un evento que se genera para la medicion del estado de la caldera. Este servicio estaria siendo usado dentro del `RDS` que usa como base de datos `Postgres`.
 
 
 
