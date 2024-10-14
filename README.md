@@ -84,11 +84,6 @@ Por defecto, el script monitorea los contenedores durante 1 minuto. Puedes ajust
 
 El script incluye datos de ejemplo para 10 contenedores con distintos niveles de mosto. Los contenedores vacíos no se activarán. La información de cada contenedor se imprime en la consola y se guarda en la base de datos.
 
-## Notas
+### Imagen del Modelo
 
-- Asegúrate de tener PostgreSQL en ejecución y accesible.
-- Puedes modificar el número de contenedores y sus niveles iniciales ajustando el diccionario `contenedores_data`.
-
----
-
-Para más información, consulta la documentación de Python y la biblioteca `psycopg2`.
+![Carga de la informacion a la base de datos](images/almacenamiento.png)
