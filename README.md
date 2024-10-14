@@ -99,6 +99,8 @@ contenedores_data = {
 }
 ```
 
+### Salida del Programa
+
 ![Salida del programa](imagenes/Proceso_Stream.png)
 
 ### Imagen Base de Datos
