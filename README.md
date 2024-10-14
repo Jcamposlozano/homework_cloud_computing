@@ -84,9 +84,6 @@ Por defecto, el script monitorea los contenedores durante 1 minuto. Puedes ajust
 
 El script incluye datos de ejemplo para 10 contenedores con distintos niveles de mosto. Los contenedores vacíos no se activarán. La información de cada contenedor se imprime en la consola y se guarda en la base de datos.
 
-![Salida del programa](imagenes/Proceso Stream.png)
-
-
 ```python
 contenedores_data = {
     1: 500.0,  # Contenedor 1 con 500 litros
@@ -101,6 +98,8 @@ contenedores_data = {
     10: 500.0  # Contenedor 10 con 500 litros
 }
 ```
+
+![Salida del programa](imagenes/Proceso_Stream.png)
 
 ### Imagen Base de Datos
 
