@@ -84,6 +84,8 @@ Por defecto, el script monitorea los contenedores durante 1 minuto. Puedes ajust
 
 El script incluye datos de ejemplo para 10 contenedores con distintos niveles de mosto. Los contenedores vacíos no se activarán. La información de cada contenedor se imprime en la consola y se guarda en la base de datos.
 
+![Salida del programa](imagenes/Proceso Stream.png)
+
 
 ```python
 contenedores_data = {
@@ -100,12 +102,12 @@ contenedores_data = {
 }
 ```
 
-![Salida del programa ](imagenes/Proceso Stream.png)
-
 ### Imagen Base de Datos
 
 ![Carga de la informacion a la base de datos](imagenes/almacenamiento.png)
 
 En esta imagen se recrea la carga de la informacion proveniente del `data_stream`. en la cual cada registro es un evento que se genera para la medicion del estado de la caldera.
+
+
 
 
