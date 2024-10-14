@@ -14,15 +14,35 @@ Este proyecto simula el monitoreo de contenedores de fermentación en un proceso
 
 ## Requisitos
 
-- Python 3.x
-- Bibliotecas de Python:
+- **Python**: 3.x
+- **Bibliotecas de Python**:
   - `psycopg2`
+  - `bottleneck`
+  - `joblib`
+  - `memory-profiler`
+  - `mkl-service`
+  - `mkl_fft`
+  - `mkl_random`
+  - `numexpr`
+  - `numpy`
+  - `pandas`
+  - `psutil`
+  - `python-dateutil`
+  - `pytz`
+  - `scikit-learn`
+  - `scipy`
+  - `setuptools`
+  - `six`
+  - `threadpoolctl`
+  - `tzdata`
+  - `wheel`
 
-Puedes instalar las bibliotecas requeridas usando pip:
+### Instalación
 
-```bash
-pip install psycopg2
-```
+Para la instalacion de todas las bibliotecas requeridas utilizando el siguiente comando:
+```sh
+pip install -r requirements.txt
+
 
 ## Configuración de la Base de Datos
 
@@ -55,7 +75,7 @@ DB_CONFIG = {
 Para ejecutar el programa, simplemente ejecuta el script Python:
 
 ```bash
-python nombre_del_archivo.py
+python main.py
 ```
 
 Por defecto, el script monitorea los contenedores durante 1 minuto. Puedes ajustar la duración modificando la variable `duracion_minutos` en el bloque `if __name__ == "__main__"`.
